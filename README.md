@@ -1,7 +1,7 @@
 # esa-hubble-dataset-creator
 A collection of consecutively run python scripts to download images taken by the Hubble's Telescope
 
-This repository contains Python scripts to scrape and download images from the ESA Hubble website. The scripts utilize web scraping techniques to gather image data, generate JSON files, and download the corresponding images. The downloaded images are organized into categories and saved in separate directories.
+This repository contains Python scripts to scrape and download images from the [ESA Hubble website](https://esahubble.org/). The scripts utilize web scraping techniques to gather image data, generate JSON files, and download the corresponding images. The downloaded images are organized into categories and saved in separate directories.
 
 ## Prerequisites
 Before running the scripts, ensure you have the following dependencies installed:
