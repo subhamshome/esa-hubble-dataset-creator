@@ -1,18 +1,14 @@
 import requests
 from bs4 import BeautifulSoup
+import constants
 
-
-# defining constants
-main_slug = 'https://esahubble.org/images/archive/category/'
-page_slug = '/page/'
-page = 5  # If page crosses the page limit in the website, a 404 error will be returned
-
-category = 'solarsystem'  # All available categories:
-# 'viewall', 'anniversary', 'csomology', 'exoplanets', 'galaxies', 'illustrations', 'jwst',
-# 'mission', 'misc', 'nebulae', 'blackholes', 'solarsystem', 'spacecraft', 'starclusters', 'stars'
-
-img_size = 'large'
-file_path = "2_json_saver.py"
+# importing constants
+main_slug = constants.MAIN_SLUG
+page_slug = constants.PAGE_SLUG
+page = constants.PAGE
+category = constants.CATEGORY
+img_size = constants.IMG_SIZE
+file_name = constants.FILE_NAME
 
 
 def get_response(category, page):
@@ -129,8 +125,8 @@ json_string = perform_find_replace(final_string)
 
 # create/rewrite the python file
 try:
-    with open(file_path, "w", encoding="utf-8") as file:
+    with open(file_name, "w", encoding="utf-8") as file:
         file.write(json_string)
-    print(f"File '{file_path}' written successfully.")
+    print(f"File '{file_name}' written successfully.")
 except Exception as e:
     print("An error occurred:", str(e))

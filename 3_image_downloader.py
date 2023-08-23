@@ -1,15 +1,14 @@
 import os
 import requests
 import json
+import constants
 
 # Load the JSON data from the file
 with open("image_data.json", "r") as json_file:
     images = json.load(json_file)
 
 # Create a directory to save the images
-category = 'solarsystem'  # All available categories:
-# 'viewall', 'anniversary', 'csomology', 'exoplanets', 'galaxies', 'illustrations', 'jwst',
-# 'mission', 'misc', 'nebulae', 'blackholes', 'solarsystem', 'spacecraft', 'starclusters', 'stars'
+category = constants.CATEGORY
 os.makedirs(category, exist_ok=True)
 
 # Download and save the images
